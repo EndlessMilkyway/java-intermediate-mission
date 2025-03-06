@@ -1,7 +1,7 @@
-package com.endlessmilkyway.tasks;
+package com.endlessmilkyway.tasks.task01;
 
-import com.endlessmilkyway.view.InputView;
-import com.endlessmilkyway.view.OutputView;
+import com.endlessmilkyway.tasks.task01.view.InputView;
+import com.endlessmilkyway.tasks.task01.view.OutputView;
 import java.util.StringTokenizer;
 
 public class Task01 {
@@ -10,7 +10,8 @@ public class Task01 {
 
     public void run() {
         int[] arr = createArrayFormConsoleInput();
-        outputView.printArrayBeforeSort(arr);
+        Messages msg = Messages.BEFORE_SORTING;
+        msg.printMsg(arr);
 
         bubbleSort(arr);
         selectionSort(arr);
@@ -45,7 +46,8 @@ public class Task01 {
         long afterTime = System.currentTimeMillis();
         long diffTime = afterTime - beforeTime;
 
-        outputView.printBubbleSortResult(copyArr);
+        Messages msg = Messages.BUBBLE_SORT_RESULT;
+        msg.printMsg(arr);
         outputView.printSortingProcessTime(diffTime);
     }
 
@@ -81,7 +83,8 @@ public class Task01 {
         long afterTime = System.currentTimeMillis();
         long diffTime = afterTime - beforeTime;
 
-        outputView.printSelectionSortResult(copyArr);
+        Messages msg = Messages.SELECTION_SORT_RESULT;
+        msg.printMsg(arr);
         outputView.printSortingProcessTime(diffTime);
     }
 
@@ -119,7 +122,8 @@ public class Task01 {
         long afterTime = System.currentTimeMillis();
         long diffTime = afterTime - beforeTime;
 
-        outputView.printInsertionSortResult(copyArr);
+        Messages msg = Messages.INSERTION_SORT_RESULT;
+        msg.printMsg(arr);
         outputView.printSortingProcessTime(diffTime);
     }
 

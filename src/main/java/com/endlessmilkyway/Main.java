@@ -1,6 +1,6 @@
 package com.endlessmilkyway;
 
-import com.endlessmilkyway.tasks.Task01;
+import com.endlessmilkyway.tasks.task01.Task01;
 
 public class Main {
 
