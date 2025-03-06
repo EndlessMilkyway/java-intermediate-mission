@@ -20,8 +20,22 @@ public class OutputView {
         System.out.println(Arrays.toString(arr));
     }
 
-    public void printBubbleSortResult(int[] arr) {
-        System.out.print("버블 정렬 결과 : ");
+    public void printArrayBeforeSort(int[] arr) {
+        System.out.print("\n정렬 전 배열 : ");
         printArrayElems(arr);
+    }
+
+    public void printBubbleSortResult(int[] arr) {
+        System.out.print("\n버블 정렬 결과 : ");
+        printArrayElems(arr);
+    }
+
+    public void printSelectionSortResult(int[] arr) {
+        System.out.print("\n선택 정렬 결과 : ");
+        printArrayElems(arr);
+    }
+
+    public void printSortingProcessTime(long diffTime) {
+        System.out.println("소요 시간(ms) : " + diffTime);
     }
 }

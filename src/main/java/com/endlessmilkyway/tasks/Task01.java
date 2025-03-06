@@ -10,9 +10,10 @@ public class Task01 {
 
     public void run() {
         int[] arr = createArrayFormConsoleInput();
-        outputView.printArrayElems(arr);
+        outputView.printArrayBeforeSort(arr);
 
         bubbleSort(arr);
+        selectionSort(arr);
     }
 
     private int[] createArrayFormConsoleInput() {
@@ -30,6 +31,7 @@ public class Task01 {
         return arr;
     }
 
+    // 버블 정렬 - 시간 복잡도 O(n^2)
     private void bubbleSort(int[] arr) {
         int[] copyArr = arr.clone();
 
@@ -43,20 +45,20 @@ public class Task01 {
         long diffTime = afterTime - beforeTime;
 
         outputView.printBubbleSortResult(copyArr);
-        System.out.println("소요 시간(ms) : " + diffTime);
+        outputView.printSortingProcessTime(diffTime);
     }
 
     // 버블 정렬 메인 로직
     private void bubbleMainLogic(int[] arr) {
         for (int i = arr.length - 1; i >= 0; i--) {
             for (int j = 0; j < i; j++) {
-                swap(arr, j);
+                bubbleSwap(arr, j);
             }
         }
     }
 
     // 배열 요소 변경 메서드
-    private void swap(int[] arr, int idx) {
+    private void bubbleSwap(int[] arr, int idx) {
         if (arr[idx] > arr[idx + 1]) {
             int temp = arr[idx];
             arr[idx] = arr[idx + 1];
@@ -64,10 +66,42 @@ public class Task01 {
         }
     }
 
+    // 선택 정렬 - 시간 복잡도 O(n^2)
     private void selectionSort(int[] arr) {
         int[] copyArr = arr.clone();
 
+        // 시간 측정 시작
+        long beforeTime = System.currentTimeMillis();
 
+        selectionMainLogic(copyArr);
+
+        // 시간 측정 종료
+        long afterTime = System.currentTimeMillis();
+        long diffTime = afterTime - beforeTime;
+
+        outputView.printSelectionSortResult(copyArr);
+        outputView.printSortingProcessTime(diffTime);
+    }
+
+    private static void selectionMainLogic(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            int min = i;
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[min] > arr[j]) {
+                    min = j;
+                }
+            }
+
+            selectionSwap(arr, min, i);
+        }
+    }
+
+    private static void selectionSwap(int[] arr, int min, int i) {
+        if (arr[min] < arr[i]) {
+            int temp = arr[min];
+            arr[min] = arr[i];
+            arr[i] = temp;
+        }
     }
 
     private void insertionSort(int[] arr) {
