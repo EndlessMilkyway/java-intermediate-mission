@@ -35,6 +35,11 @@ public class OutputView {
         printArrayElems(arr);
     }
 
+    public void printInsertionSortResult(int[] arr) {
+        System.out.print("\n삽입 정렬 결과 : ");
+        printArrayElems(arr);
+    }
+
     public void printSortingProcessTime(long diffTime) {
         System.out.println("소요 시간(ms) : " + diffTime);
     }
