@@ -28,56 +28,31 @@ public class QuickSort {
     private void mainLogic(int[] arr, int start, int end) {
         if (start < end) {
             int pivot = partition(arr, start, end);
-            mainLogic(arr, start, pivot - 1);
+            mainLogic(arr, start, pivot);
             mainLogic(arr, pivot + 1, end);
         }
     }
 
-    // 피벗을 산출하는 메서드
     private int partition(int[] arr, int start, int end) {
-        // 데이터가 2개인 경우에는 바로 비교하여 정렬
-        if (start + 1 == end) {
-            if (arr[start] > arr[end]) {
-                quickSwap(arr, start, end);
-            }
-            return end;
-        }
+        int low = start - 1;
+        int high = end + 1;
+        int pivot = arr[(start + end) / 2];
 
-        // 중앙값 계산
-        int median = (start + end) / 2;
-        // 중앙값을 시작 위치와 swap
-        quickSwap(arr, start, median);
-        // pivot을 시작 위치로 설정 - 위에서 swap 하였으므로
-        int pivot = arr[start];
-        // 시작점 종료점 선언
-        int j = search(arr, start, end, pivot);
-        // pivot 데이터를 나눠진 두 그룹의 경계 index에 저장
-        arr[start] = arr[j];
-        arr[j] = pivot;
-        // 경계 index 반환
-        return j;
-    }
+        while (true) {
+            do {
+                low++;
+            } while (arr[low] < pivot);
 
-    private int search(int[] arr, int start, int end, int pivot) {
-        int i = start + 1;
-        int j = end;
-        while (i <= j) {
-            // 피벗보다 작은 수가 나올 때까지 j--
-            while (pivot < arr[j] && j >= start + 1) {
-                j--;
+            do {
+                high--;
+            } while (arr[high] > pivot && low <= high);
+
+            if (low >= high) {
+                return high;
             }
-            // 피벗보다 큰 수가 나올 때까지 i++
-            while (pivot > arr[i] && j <= end) {
-                i++;
-            }
-            // 찾은 i와 j를 swap
-            if (i < j) {
-                quickSwap(arr, i++, j--);
-            } else {
-                break;
-            }
+
+            quickSwap(arr, low, high);
         }
-        return j;
     }
 
     private void quickSwap(int[] arr, int i, int j) {
