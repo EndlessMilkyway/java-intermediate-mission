@@ -18,7 +18,7 @@ public class SelectionSort {
 
         // 시간 측정 종료
         long afterTime = System.currentTimeMillis();
-        long diffTime = afterTime - beforeTime;
+        double diffTime = (double) (afterTime - beforeTime) / 1000;
 
         Messages msg = Messages.SELECTION_SORT_RESULT;
         msg.printMsg(copyArr);

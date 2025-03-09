@@ -27,7 +27,7 @@ public class OutputView {
         printArrayElems(arr);
     }
 
-    public void printSortingProcessTime(long diffTime) {
+    public void printSortingProcessTime(double diffTime) {
         System.out.println(PROCESS_TIME + diffTime);
     }
 }

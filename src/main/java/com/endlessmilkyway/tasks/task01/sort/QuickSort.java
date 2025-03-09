@@ -18,7 +18,7 @@ public class QuickSort {
 
         // 시간 측정 종료
         long afterTime = System.currentTimeMillis();
-        long diffTime = afterTime - beforeTime;
+        double diffTime = (double) (afterTime - beforeTime) / 1000;
 
         Messages msg = Messages.QUICK_SORT_RESULT;
         msg.printMsg(copyArr);
