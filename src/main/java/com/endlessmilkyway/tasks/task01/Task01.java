@@ -11,7 +11,7 @@ import java.util.StringTokenizer;
 public class Task01 {
 
     public void run() {
-        int[] arr = createArrayFormConsoleInput();
+        int[] arr = createArrayFromConsoleInput();
         Messages msg = Messages.BEFORE_SORTING;
         msg.printMsg(arr);
 
@@ -31,7 +31,7 @@ public class Task01 {
         mergeSort.process(arr);
     }
 
-    private int[] createArrayFormConsoleInput() {
+    private int[] createArrayFromConsoleInput() {
         InputView inputView = InputView.getInstance();
         int size = inputView.getArrayLengthFromConsole();
         int[] arr = new int[size];
