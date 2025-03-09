@@ -7,7 +7,8 @@ public enum Messages {
     BUBBLE_SORT_RESULT("버블 정렬 결과 : "),
     SELECTION_SORT_RESULT("선택 정렬 결과 : "),
     INSERTION_SORT_RESULT("삽입 정렬 결과 : "),
-    QUICK_SORT_RESULT("퀵 정렬 결과 : ");
+    QUICK_SORT_RESULT("퀵 정렬 결과 : "),
+    MERGE_SORT_RESULT("병합 정렬 결과 : ");
 
     private final String msg;
 

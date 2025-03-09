@@ -2,6 +2,7 @@ package com.endlessmilkyway.tasks.task01;
 
 import com.endlessmilkyway.tasks.task01.sort.BubbleSort;
 import com.endlessmilkyway.tasks.task01.sort.InsertionSort;
+import com.endlessmilkyway.tasks.task01.sort.MergeSort;
 import com.endlessmilkyway.tasks.task01.sort.QuickSort;
 import com.endlessmilkyway.tasks.task01.sort.SelectionSort;
 import com.endlessmilkyway.tasks.task01.view.InputView;
@@ -25,6 +26,9 @@ public class Task01 {
 
         QuickSort quickSort = new QuickSort();
         quickSort.process(arr);
+
+        MergeSort mergeSort = new MergeSort();
+        mergeSort.process(arr);
     }
 
     private int[] createArrayFormConsoleInput() {
@@ -40,11 +44,5 @@ public class Task01 {
         }
 
         return arr;
-    }
-
-    private void mergeSort(int[] arr) {
-        int[] copyArr = arr.clone();
-
-
     }
 }
