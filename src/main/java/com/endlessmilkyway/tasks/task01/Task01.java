@@ -5,7 +5,7 @@ import com.endlessmilkyway.tasks.task01.sort.InsertionSort;
 import com.endlessmilkyway.tasks.task01.sort.MergeSort;
 import com.endlessmilkyway.tasks.task01.sort.QuickSort;
 import com.endlessmilkyway.tasks.task01.sort.SelectionSort;
-import com.endlessmilkyway.tasks.task01.view.InputView;
+import com.endlessmilkyway.tasks.view.InputView;
 import java.util.StringTokenizer;
 
 public class Task01 {

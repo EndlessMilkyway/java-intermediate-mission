@@ -1,6 +1,6 @@
-package com.endlessmilkyway.tasks.task02;
+package com.endlessmilkyway.tasks.task02_06;
 
-import com.endlessmilkyway.tasks.task02.view.InputView;
+import com.endlessmilkyway.tasks.view.InputView;
 import java.util.List;
 import java.util.function.BiConsumer;
 

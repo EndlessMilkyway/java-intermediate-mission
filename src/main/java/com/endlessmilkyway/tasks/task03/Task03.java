@@ -1,6 +1,6 @@
 package com.endlessmilkyway.tasks.task03;
 
-import com.endlessmilkyway.tasks.task03.view.InputView;
+import com.endlessmilkyway.tasks.view.InputView;
 
 public class Task03 {
 
