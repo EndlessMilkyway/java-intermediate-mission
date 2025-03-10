@@ -2,8 +2,8 @@ package com.endlessmilkyway.tasks.task09;
 
 public class Employee {
 
-    private String name;
-    private double salary;
+    private final String name;
+    private final double salary;
 
     public Employee(String name, double salary) {
         this.name = name;

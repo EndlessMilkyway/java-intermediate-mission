@@ -2,7 +2,7 @@ package com.endlessmilkyway.tasks.task09;
 
 public class Manager extends Employee {
 
-    private String role;
+    private final String role;
 
     public Manager(String name, double salary, String role) {
         super(name, salary);
