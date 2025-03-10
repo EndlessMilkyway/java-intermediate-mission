@@ -1,6 +1,6 @@
 package com.endlessmilkyway;
 
-import com.endlessmilkyway.tasks.task04.Task04;
+import com.endlessmilkyway.tasks.task05_07_08_10.Task;
 
 public class Main {
 
@@ -14,7 +14,12 @@ public class Main {
 //        Task03 task03 = new Task03();
 //        task03.run();
 
-        Task04 task04 = new Task04();
-        task04.run();
+//        Task04 task04 = new Task04();
+//        task04.run();
+
+        Task task = new Task();
+        task.run();
+
+
     }
 }
