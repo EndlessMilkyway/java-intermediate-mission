@@ -4,7 +4,7 @@ import com.endlessmilkyway.tasks.view.InputView;
 import java.util.List;
 import java.util.function.BiConsumer;
 
-public class Task02 {
+public class Task02_06 {
 
     private static final String HEADER = "연산 결과는 ";
     private static final String FOOTER = " 입니다.";
